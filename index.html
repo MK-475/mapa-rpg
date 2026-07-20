@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Mundo</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- ==========================
+         CABEÇALHO
+    =========================== -->
+
+    <header>
+
+        <h1>Novo Mundo</h1>
+
+        <button id="menu" type="button">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- ==========================
+         CONTAINER PRINCIPAL
+    =========================== -->
+
+    <div class="container">
+
+        <!-- MENU LATERAL -->
+
+        <aside id="menuLateral" class="menu-fechado">
+
+            <h2>Menu</h2>
+
+            <button onclick="trocarMapa('principal')">
+                🗺️ Mapa Principal
+            </button>
+
+            <button onclick="trocarMapa('cidades')">
+                🏰 Imperios, Reinos e Cidades
+            </button>
+
+            <button onclick="trocarMapa('territorios')">
+                🌍 Territórios
+            </button>
+
+            <a href="capcid/capcid.html">
+                <button>
+                    ⚔️ Impérios e Reinos Wick
+                </button>
+            </a>
+
+            <!-- ELEMENTO ONDE O RELÓGIO APARECE -->
+            <div class="bloco-contador">
+                <span>⏱️ Tempo decorrido:</span>
+                <p id="contador">0 dias 00 horas 00 minutos 00 segundos</p>
+            </div>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    // Meia-noite no Horário de Brasília (UTC-3)
+                    const inicio = new Date("2026-07-20T00:00:00-03:00").getTime();
+
+                    function actualizarContador() {
+                        let agora = new Date().getTime();
+                        let diff = agora - inicio;
+
+                        if (diff < 0) {
+                            document.getElementById("contador").textContent = "0 dias 00 horas 00 minutos 00 segundos";
+                            return;
+                        }
+
+                        let dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+                        let horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                        let minutos = Math.floor((diff / (1000 * 60)) % 60);
+                        let segundos = Math.floor((diff / 1000) % 60);
+
+                        // Formata os números com 2 dígitos (ex: 00, 05, 45)
+                        let h = String(horas).padStart(2, '0');
+                        let m = String(minutos).padStart(2, '0');
+                        let s = String(segundos).padStart(2, '0');
+
+                        // Exemplo de saída: "0 dias 00 horas 45 minutos 12 segundos"
+                        document.getElementById("contador").textContent =
+                            `${dias} dias ${h} horas ${m} minutos ${s} segundos`;
+                    }
+
+                    setInterval(actualizarContador, 1000);
+                    actualizarContador();
+                });
+            </script>
+
+        </aside>
+
+
+        <!-- ==========================
+             MAPA
+        =========================== -->
+
+        <main>
+
+            <div class="mapa-container" id="mapaContainer">
+
+                <div id="mapaWrapper">
+
+                    <img id="mapa" src="img/mapa-principal.jpeg" alt="Mapa do mundo Novo Mundo" draggable="false">
+
+                    <!-- ==========================
+                     MARCADORES
+                     =========================== -->
+
+                    <div id="marcadores" class="oculto">
+
+                        <!-- ============================================ -->
+                        <!-- REINO DE RE-ESTIZE -->
+                        <!-- ============================================ -->
+
+                        <!-- Capital: Re-Estize -->
+                        <div class="ponto re-estize-capital capital" style="top:27.8%; left:38.8%;"
+                            title="Capital: Re-Estize"></div>
+
+                        <!-- Cidade: Re-Baudorel -->
+                        <div class="ponto re-baudorel" style="top:18.4%; left:45.8%;" title="Cidade: Re-Baudorel"></div>
+
+                        <!-- Cidade: E-Asenaru -->
+                        <div class="ponto e-asenaru" style="top:17.1%; left:39.5%;" title="Cidade: E-Asenaru"></div>
+
+                        <!-- Cidade: Re-Bluemalashull -->
+                        <div class="ponto re-bluemalashull" style="top:15.9%; left:51.5%;"
+                            title="Cidade: Re-Bluemalashull"></div>
+
+                        <!-- Cidade: Re-Ulovale -->
+                        <div class="ponto re-ulovale" style="top:12%; left:53%;" title="Cidade: Re-Ulovale"></div>
+
+                        <!-- Cidade: Re-Lobell -->
+                        <div class="ponto re-lobell" style="top:36.2%; left:32.6%;" title="Cidade: Re-Lobell"></div>
+
+                        <!-- Cidade: E-Liberia -->
+                        <div class="ponto e-liberia" style="top:27%; left:46.7%;" title="Cidade: E-Liberia"></div>
+
+                        <!-- Cidade: E-Pespel -->
+                        <div class="ponto e-pespel" style="top:36.4%; left:45.8%;" title="Cidade: E-Pespel"></div>
+
+                        <!-- Cidade: E-Rantel -->
+                        <div class="ponto e-rantel" style="top:40%; left:58.1%;" title="Cidade: E-Rantel"></div>
+
+                        <!-- Great Tomb of Nazarick -->
+                        <div class="ponto nazarick" style="top:32.5%; left:61%;" title="Great Tomb of Nazarick"></div>
+
+                        <!-- Carne Village -->
+                        <div class="ponto carne-village" style="top:36.5%; left:57.3%;" title="Carne Village"></div>
+
+                        <!-- ============================================ -->
+                        <!-- IMPÉRIO BAHARUTH -->
+                        <!-- ============================================ -->
+
+                        <!-- Imperial Capital: Anuvintar -->
+                        <div class="ponto anuvintar capital" style="top:29.5%; left:73.8%;"
+                            title="Imperial Capital: Anuvintar"></div>
+
+                        <!-- Great Imperial Fortress -->
+                        <div class="ponto great-imperial-fortress" style="top:36%; left:71%;"
+                            title="Great Imperial Fortress"></div>
+
+                        <!-- Katze Plains -->
+                        <div class="ponto katze-plains" style="top:47.5%; left:67.5%;" title="Katze Plains"></div>
+
+                        <!-- ============================================ -->
+                        <!-- TEOCRACIA SLANE -->
+                        <!-- ============================================ -->
+
+                        <!-- Capital da Teocracia Slane -->
+                        <div class="ponto slane-capital capital" style="top:64.1%; left:59.5%;"
+                            title="Capital da Teocracia Slane"></div>
+
+                        <!-- ============================================ -->
+                        <!-- MONTANHA DE ABELION -->
+                        <!-- ============================================ -->
+
+                        <!-- Abelion Hills -->
+                        <div class="ponto abelion-hills" style="top:47.5%; left:35.5%;" title="Abelion Hills"></div>
+
+                        <!-- ============================================ -->
+                        <!-- REINO SAGRADO DE ROBLE -->
+                        <!-- ============================================ -->
+
+                        <!-- Capital de Roble -->
+                        <div class="ponto roble-capital capital" style="top:54.8%; left:11.4%;"
+                            title="Capital de Roble"></div>
+
+                        <!-- Great Wall -->
+                        <div class="ponto great-wall" style="top:51.5%; left:27.9%;" title="Great Wall"></div>
+
+                        <!-- ============================================ -->
+                        <!-- MONTANHA AZERLISIA -->
+                        <!-- ============================================ -->
+
+                        <!-- Dwarf Kingdom -->
+                        <div class="ponto dwarf-kingdom" style="top:21.8%; left:57.4%;" title="Dwarf Kingdom"></div>
+
+                        <!-- ============================================ -->
+                        <!-- GRANDE FLORESTA DE TOB -->
+                        <!-- ============================================ -->
+
+                        <!-- Lizardmen Village -->
+                        <div class="ponto lizardmen-village" style="top:26.2%; left:53.8%;" title="Lizardmen Village">
+                        </div>
+
+                        <!-- ============================================ -->
+                        <!-- REINOS DOS NEGROS -->
+                        <!-- ============================================ -->
+
+                        <!-- Dark Elf Country -->
+                        <div class="ponto dark-elf-country" style="top:58.8%; left:48.8%;" title="Dark Elf Country">
+                        </div>
+
+                        <!-- Dark Dwarf Country -->
+                        <div class="ponto dark-dwarf-country" style="top:59.8%; left:41.8%;" title="Dark Dwarf Country">
+                        </div>
+
+                        <!-- ============================================ -->
+                        <!-- REINO DOS ELFOS -->
+                        <!-- ============================================ -->
+
+                        <!-- Elf Kingdom Capital -->
+                        <div class="ponto elf-kingdom-capital capital" style="top:68%; left:47.6%;"
+                            title="Elf Kingdom Capital"></div>
+
+                        <!-- Great Forest of Evasha -->
+                        <div class="ponto great-forest-evasha" style="top:74.5%; left:41.5%;"
+                            title="Great Forest of Evasha"></div>
+
+                        <!-- Crescent Lake -->
+                        <div class="ponto crescent-lake" style="top:73.5%; left:51.5%;" title="Crescent Lake"></div>
+
+                        <!-- ============================================ -->
+                        <!-- FEDERAÇÃO DE ARGLAND -->
+                        <!-- ============================================ -->
+
+                        <!-- Argland Council-State Alliance -->
+                        <div class="ponto argland capital" style="top:10%; left:23.5%;"
+                            title="Argland Council-State Alliance"></div>
+
+                        <!-- ============================================ -->
+                        <!-- FEDERAÇÃO DE CALZANAS -->
+                        <!-- ============================================ -->
+
+                        <!-- Calzanas City-State Union -->
+                        <div class="ponto calzanas capital" style="top:27%; left:87.5%;"
+                            title="Calzanas City-State Union"></div>
+
+                        <!-- ============================================ -->
+                        <!-- MINORIAS -->
+                        <!-- ============================================ -->
+
+                        <!-- Troll Kingdom -->
+                        <div class="ponto troll capital" style="top:42.5%; left:90.7%;" title="Troll Kingdom"></div>
+
+                        <!-- Great Minotaur Nation -->
+                        <div class="ponto minotaur capital" style="top:50.5%; left:93.2%;"
+                            title="Great Minotaur Nation"></div>
+
+                        <!-- ============================================ -->
+                        <!-- IMPERIO DOS DRAGÕES -->
+                        <!-- ============================================ -->
+
+                        <!-- Draconic Kingdom -->
+                        <div class="ponto draconic capital" style="top:64.5%; left:87.5%;" title="Draconic Kingdom">
+                        </div>
+
+                    </div>
+                    <!-- FIM DOS MARCADORES -->
+
+                </div>
+                <!-- FIM mapa-container -->
+
+            </div>
+            <!-- FIM areaMapa -->
+
+        </main>
+
+    </div>
+    <!-- FIM container -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

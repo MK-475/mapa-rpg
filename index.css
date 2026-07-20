@@ -1,0 +1,456 @@
+/* ==========================
+   CONFIGURAÇÕES GERAIS
+========================== */
+
+body {
+    margin: 0;
+    background: #111;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* ==========================
+   CABEÇALHO
+========================== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 15px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .4);
+    position: relative;
+    z-index: 1001;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header button {
+    background: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: .3s;
+}
+
+header button:hover {
+    background: #666;
+}
+
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+
+/* ==========================
+   MENU LATERAL
+========================== */
+
+aside {
+    width: 240px;
+    background: #2b2b2b;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    transition:
+        width .35s ease,
+        padding .35s ease;
+}
+
+aside h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+aside button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #444;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: .25s;
+}
+
+aside button:hover {
+    background: #666;
+    transform: scale(1.03);
+}
+
+
+/* ==========================
+   MENU FECHADO
+========================== */
+
+.menu-fechado {
+    width: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.menu-fechado h2,
+.menu-fechado button {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* ==========================
+   MAPA
+========================== */
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+#areaMapa {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: grab;
+}
+
+#areaMapa:active {
+    cursor: grabbing;
+}
+
+
+/* ==========================
+   CONTAINER DO MAPA
+========================== */
+
+.mapa-container {
+    position: relative;
+    width: min(70vw, 950px);
+    aspect-ratio: 2048/1536;
+}
+
+
+/* ==========================
+   IMAGEM
+========================== */
+
+#mapa {
+    width: 100%;
+    height: auto;
+    height: 100%;
+    display: block;
+
+    border: 4px solid #6f5b3e;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+
+    transition:
+        opacity .25s ease,
+        transform .15s ease;
+
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+#mapa:hover {
+    transform: scale(1.01);
+}
+
+
+/* ==========================
+   MARCADORES
+========================== */
+
+#marcadores {
+    position: absolute;
+    inset: 0;
+}
+
+.oculto {
+    display: none !important;
+}
+
+
+/* ==========================
+   PONTOS
+========================== */
+
+.ponto {
+    position: absolute;
+
+    width: 0.6vw; /* Largura */
+    height: 0.6vw; /* Altura */
+
+    min-width: 6px;
+    min-height: 6px;
+    max-width: 9px;
+    max-height: 9px;
+
+    border-radius: 50%;
+
+    border: 1.5px solid rgba(255, 255, 255, .55);
+
+    transform: translate(-50%, -50%);
+
+    cursor: pointer;
+
+    transition: .25s;
+
+    z-index: 10;
+
+    box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+}
+
+/* Capitais */
+
+.ponto.capital {
+    width: 11px; /* Lagura*/
+    height: 11px; /* Altura*/
+
+    border-radius: 3px;
+
+    border: 2px solid rgba(255, 215, 0, .9);
+
+    transform: translate(-50%, -50%) rotate(45deg);
+
+    box-shadow: 0 0 6px rgba(255, 215, 0, .3);
+}
+
+/* Hover */
+
+.ponto:hover {
+    transform: translate(-50%, -50%) scale(1.5);
+
+    background: #fff !important;
+
+    border-color: #fff;
+
+    box-shadow: 0 0 10px rgba(255, 255, 255, .8);
+
+    z-index: 20;
+}
+
+.ponto.capital:hover {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1.5);
+}
+
+
+/* ==========================
+   CORES INDIVIDUAIS DOS MARCADORES
+========================== */
+
+/* ==========================
+   REINO DE RE-ESTIZE
+========================== */
+
+.re-estize-capital {
+    background: #2b7fff;
+}
+
+.re-baudorel {
+    background: #2b7fff;
+}
+
+.e-asenaru {
+    background: #2b7fff;
+}
+
+.re-bluemalashull {
+    background: #2b7fff;
+}
+
+.re-ulovale {
+    background: #2b7fff;
+}
+
+.re-lobell {
+    background: #2b7fff;
+}
+
+.e-liberia {
+    background: #2b7fff;
+}
+
+.e-pespel {
+    background: #2b7fff;
+}
+
+.e-rantel {
+    background: #2b7fff;
+}
+
+.nazarick {
+    background: #E0E0E0;
+}
+
+.carne-village {
+    background: #2b7fff;
+}
+
+/* ==========================
+   IMPÉRIO BAHARUTH
+========================== */
+
+.anuvintar {
+    background: #ff3b30;
+}
+
+.great-imperial-fortress {
+    background: #ff3b30;
+}
+
+.katze-plains {
+    background: #ff3b30;
+}
+
+
+/* ==========================
+   TEOCRACIA SLANE
+========================== */
+
+.slane-capital {
+    background: #ffcc00;
+}
+
+
+/* ==========================
+  MONTANHA DE ABELION
+========================== */
+.abelion-hills {
+    background: #E0B0FF;
+}
+
+/* ==========================
+   REINO SAGRADO DE ROBLE
+========================== */
+
+.roble-capital {
+    background: #FF00FF;
+}
+
+.great-wall {
+    background: #FF00FF;
+}
+
+/* ==========================
+   MONTANHA AZERLISIA
+========================== */
+.dwarf-kingdom {
+    background: #FFC067;
+}
+
+/* ==========================
+   GRANDE FLORESTA DE TOB
+========================== */
+
+.lizardmen-village {
+    background: #4cd964;
+}
+
+/* ==========================
+   REINO DOS NEGRO
+========================== */
+
+.dark-dwarf-country {
+    background: #3D3D3D;
+}
+
+.dark-elf-country {
+    background: #3D3D3D;
+}
+
+/* ==========================
+   REINO DOS ELFOS
+========================== */
+
+.elf-kingdom-capital {
+    background: #2E6F40;
+}
+
+.great-forest-evasha {
+    background: #2E6F40;
+}
+
+.crescent-lake {
+    background: #2E6F40;
+}
+
+
+/* ==========================
+   FEDERAÇÃO DE ARGLAND
+========================== */
+
+.argland {
+    background: #ff9500;
+}
+
+/* ==========================
+   FEDERAÇÃO DE CALZANAS
+========================== */
+
+.calzanas {
+    background: #7E8C54;
+}
+
+
+/* ==========================
+   MINORIAS
+========================== */
+
+.troll {
+    background: #8b5a2b;
+}
+
+.minotaur {
+    background: #8b5a2b;
+}
+
+/* ==========================
+   IMPERIO DOS DRAGÕES
+========================== */
+
+.draconic {
+    background: #af52de;
+}
+
+.bloco-contador {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+#contador {
+    font-weight: bold;
+    margin-top: 5px;
+    color: #ffca28; /* Cor de destaque amarela/dourada */
+}

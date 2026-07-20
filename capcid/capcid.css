@@ -1,0 +1,423 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    /* Criamos uma camada preta transparente sobre a imagem */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/arvore.jpg");
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-attachment: fixed; /* Opcional: mantém o fundo fixo ao rolar */
+}
+
+/* ==========================
+   CABEÇALHO
+========================== */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6FC500;
+    padding: 15px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .4);
+    position: relative;
+    z-index: 1001;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+    color: white;
+}
+
+/* ==========================
+   MAPAS CONTAINER
+========================== */
+
+.container-mapas {
+    display: flex; /* Define o container como um flex container */
+    justify-content: space-between; /* Espaço entre os mapas */
+    width: 100%;
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+.mapa-esquerda, .mapa-direita {
+    width: 100%; /* Cada mapa ocupa metade da largura do container */
+}
+
+/* ==========================
+   MAPAS A ESQUERDA
+========================== */
+.mapa-esquerda {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 50px;
+    margin-top: 20px;
+    gap: 20px; /* Espaço entre os mapas */
+}
+
+#mapa-baharuth {
+    width: 300px;
+    height: auto;
+    border: 5px solid #096C6C; /* Adiciona uma borda preta */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+}
+
+#mapa-re-estize {
+    width: 300px;
+    height: auto;
+    border: 5px solid #C91B00;
+    border-radius: 10px;
+}
+
+#mapa-roble {
+    width: 300px;
+    height: auto;
+    border: 5px solid #000080;
+    border-radius: 10px;
+}
+
+#mapa-slane{
+    width: 300px;
+    height: auto;
+    border: 5px solid #0F52BA;
+    border-radius: 10px;
+}
+
+/* ==========================
+   MAPAS A DIREITA
+========================== */
+
+.mapa-direita {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 50px;
+    margin-top: 20px;
+    gap: 20px; /* Espaço entre os mapas */
+
+    width: 100%; /* Ocupa toda a largura disponível */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+#mapa-dragao {
+    width: 300px;
+    height: 200px;
+    border: 5px solid #7D007D; /* Adiciona uma borda preta */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+}
+
+#mapa-anao {
+    width: 300px;
+    height: 200px;
+    border: 5px solid #ff9500; /* Adiciona uma borda preta */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+}
+
+#mapa-elfo {
+    width: 300px;
+    height: auto;
+    border: 5px solid #2E6F40; /* Adiciona uma borda preta */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+}
+
+#mapa-sorcerer {
+    width: 300px;
+    height: auto;
+    border: 5px solid #8B0000; /* Adiciona uma borda preta */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+}
+
+
+/* ==========================
+
+========================== */
+
+/* Remove os estilos padrão do botão para que pareça apenas a imagem clicável */
+.botao-mapa {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Estilização da caixa que abre no centro da tela (Dialog) */
+.modal-descricao {
+    width: 90%;
+    max-width: 650px;
+    height: 80vh; 
+    
+    border: 2px solid #FFF700; 
+    border-radius: 12px;
+    padding: 25px;
+    background-color: #222; 
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+
+    /* Centralização nativa perfeita do próprio HTML5 */
+    margin: auto; 
+    
+    /* REMOVEMOS o display: flex daqui para não quebrar o cenário */
+}
+
+/* Alinhamento do conteúdo dentro do Modal */
+.conteudo-modal {
+    /* O Flexbox fica AQUI dentro, organizando tudo em coluna */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    /* Ativa a rolagem interna de forma isolada */
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+}
+
+/* O 'backdrop' é o fundo que cobre o resto do site */
+.modal-descricao::backdrop {
+    background-color: rgba(0, 0, 0, 0.85) !important; /* Força o fundo escuro a aparecer */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Alinhamento do conteúdo dentro do Modal */
+.conteudo-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    /* Faz o conteúdo interno rolar mantendo o quadrado estático */
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+}
+
+/* Imagem dentro do modo de descrição */
+.imagem-foco {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.texto-descricao {
+    text-align: justify;
+}
+
+/* Botão de fechar elegante */
+.botao-fechar {
+    align-self: flex-end;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* O 'backdrop' é o fundo que cobre o resto do site enquanto o mapa está aberto */
+.modal-descricao::backdrop {
+    background-color: rgba(0, 0, 0, 0.85); /* Escurece 85% do fundo, sumindo com as outras imagens */
+}
+
+
+
+
+
+/* Estilo para o título das cidades dentro do modal */
+
+.titulo-cidades1 {
+    margin-top: 25px;
+    border-bottom: 1px solid #096C6C; /* Linha com a cor temática do Reino */
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.titulo-cidades2 {
+    margin-top: 25px;
+    border-bottom: 1px solid #C91B00; /* Linha com a cor temática do Reino */
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.titulo-cidades3 {
+    margin-top: 25px;
+    border-bottom: 1px solid #000080; /* Linha com a cor temática do Reino */
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.titulo-cidades4 {
+    margin-top: 25px;
+    border-bottom: 1px solid #0F52BA; /* Linha com a cor temática do Reino */
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.titulo-cidades5 {
+    margin-top: 25px;
+    border-bottom: 1px solid #7D007D; /* Linha com a cor temática do Reino */
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.titulo-cidades6 {
+    margin-top: 25px;
+    border-bottom: 1px solid #ff9500; /* Linha com a cor temática do Reino */
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.titulo-cidades7 {
+    margin-top: 25px;
+    border-bottom: 1px solid #2E6F40; /* Linha com a cor temática do Reino */
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.titulo-cidades8 {
+    margin-top: 25px;
+    border-bottom: 1px solid #8B0000; /* Linha com a cor temática do Reino */
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+
+/* Alinha as cidades permitindo quebra de linha */
+.container-cidades {
+    display: flex;
+    justify-content: center; /* Centraliza a segunda linha se houver menos de 3 cards nela */
+    flex-wrap: wrap;         /* === MÁGICA: Permite pular para a linha de baixo === */
+    gap: 15px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+
+
+/* Organiza o conteúdo de cada cidade individual */
+.card-cidade1, .card-cidade2, .card-cidade3, .card-cidade4, .card-cidade5, .card-cidade6, .card-cidade7, .card-cidade8 {
+    /* Define o cálculo matemático: 3 por linha descontando os espaçamentos */
+    flex: 1 1 calc(33.333% - 15px); 
+    min-width: 170px; /* Impede que fiquem esmagadas se a tela diminuir */
+    max-width: 200px; /* Mantém uma largura máxima visual elegante */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 12px;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+.card-cidade1 h4 {
+    margin: 0 0 8px 0;
+    color: #096C6C;
+}
+
+.card-cidade2 h4 {
+    margin: 0 0 8px 0;
+    color: #C91B00;
+}
+
+.card-cidade3 h4 {
+    margin: 0 0 8px 0;
+    color: #000080;
+}
+
+.card-cidade4 h4 {
+    margin: 0 0 8px 0;
+    color: #0F52BA;
+}
+
+.card-cidade5 h4 {
+    margin: 0 0 8px 0;
+    color: #7D007D;
+}
+
+.card-cidade6 h4 {
+    margin: 0 0 8px 0;
+    color: #ff9500;
+}
+
+.card-cidade7 h4 {
+    margin: 0 0 8px 0;
+    color: #2E6F40;
+}
+
+.card-cidade8 h4 {
+    margin: 0 0 8px 0;
+    color: #8B0000;
+}
+
+
+
+
+.card-cidade1 p {
+    font-size: 13px;
+    text-align: justify;
+    margin-top: 8px;
+}
+
+.card-cidade2 p {
+    font-size: 13px;
+    text-align: justify;
+    margin-top: 8px;
+}
+
+.card-cidade3 p {
+    font-size: 13px;
+    text-align: justify;
+    margin-top: 8px;
+}
+
+.card-cidade4 p {
+    font-size: 13px;
+    text-align: justify;
+    margin-top: 8px;
+}
+
+.card-cidade5 p {
+    font-size: 13px;
+    text-align: justify;
+    margin-top: 8px;
+}
+
+.card-cidade6 p {
+    font-size: 13px;
+    text-align: justify;
+    margin-top: 8px;
+}
+
+.card-cidade7 p {
+    font-size: 13px;
+    text-align: justify;
+    margin-top: 8px;
+}
+
+.card-cidade8 p {
+    font-size: 13px;
+    text-align: justify;
+    margin-top: 8px;
+}
+
+/* Tamanho das fotos das cidades */
+.foto-cidade {
+    width: 150px;
+    height: 90px;
+    border-radius: 4px;
+    border: 2px solid #555;
+}

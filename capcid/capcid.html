@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Mundo</title>
+    <link rel="stylesheet" href="capcid.css">
+</head>
+
+<body>
+
+    <!-- ==========================
+         CABEÇALHO
+    =========================== -->
+
+    <header>
+        <h1>YGGBRAZIL</h1>
+    </header>
+
+
+    <!-- ==========================
+       IMPERIOS E REINOS (8)
+    =========================== -->
+
+    <div class="container-mapas">
+        <div class="mapa-esquerda">
+
+            <!-- === IMPÉRIO BAHARUTH 1=== -->
+            <button class="botao-mapa" onclick="document.getElementById('modal-baharuth').showModal()"
+                title="Império de Baharuth">
+                <img id="mapa-baharuth" src="./img/baharuth-empire.jpeg" alt="Império de Baharuth" />
+            </button>
+
+            <dialog id="modal-baharuth" class="modal-descricao">
+                <div class="conteudo-modal">
+                    <button class="botao-fechar" onclick="this.closest('dialog').close()">✕ Fechar</button>
+                    <h2>Império de Baharuth</h2>
+                    <img src="./img/baharuth-empire.jpeg" alt="Império de Baharuth Grande" class="imagem-foco" />
+                    <p class="texto-descricao">
+                        Uma das maiores potências humanas do continente no novo mundo, conhecido por sua eficiência administrativa, 
+                        disciplina militar e constante busca pela expansão de sua influência. Diferentemente do Reino de Re-Estize, 
+                        cuja estrutura política é marcada por disputas entre a monarquia e a nobreza, o Império possui um 
+                        governo altamente centralizado, permitindo decisões rápidas e uma administração muito mais organizada.
+                    </p>
+
+                    <!-- Nova seção com as fotos das cidades integradas -->
+                    <h3 class="titulo-cidades1">Cidades Notáveis 2</h3>
+                    <div class="container-cidades">
+                        <div class="card-cidade1">
+                            <h4>Arwintar</h4>
+                            <!-- Corrigido de ./imag/ para ./img/ -->
+                            <img src="./imag/arwintar.png" alt="Cidade de Arwintar" class="foto-cidade" />
+                            <p>É a capital do Império Baharuth e o centro político, econômico e cultural da nação. 
+                                Governada diretamente pelo Imperador Jircniv Rune Farlord El Nix, a cidade é conhecida por sua arquitetura monumental, 
+                                largas avenidas, palácios imperiais e forte presença militar. Além de abrigar a corte imperial, 
+                                Arwintar também concentra importantes instituições do império, como a Academia Imperial de Magia, 
+                                considerada uma das mais prestigiadas do continente.
+                            </p>
+                        </div>
+
+                        <div class="card-cidade1">
+                            <h4>Castrum Imperial</h4>
+                            <!-- Corrigido de ./imag/ para ./img/ -->
+                            <img src="./imag/castrum-imperial.png" alt="Cidade de Castrum Imperial" class="foto-cidade" />
+                            <p> É uma grande fortaleza militar situada próxima às Planícies de Katze, desempenhando um 
+                                papel estratégico na defesa das fronteiras do Império Baharuth. Construída para servir como base de operações 
+                                durante as campanhas militares contra o Reino de Re-Estize, 
+                                a fortaleza abriga quartéis, arsenais, depósitos de suprimentos e postos de comando 
+                                capazes de sustentar grandes exércitos por longos períodos
+                            </p>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </dialog>
+
+
+
+            <!-- === REINO DE RE-ESTIZE 2=== -->
+            <button class="botao-mapa" onclick="document.getElementById('modal-re-estize').showModal()"
+                title="Reino de Re-Estize">
+                <img id="mapa-re-estize" src="./img/re-estize-kingdom.jpeg" alt="Reino de Re-Estize" />
+            </button>
+
+            <dialog id="modal-re-estize" class="modal-descricao">
+                <div class="conteudo-modal">
+                    <button class="botao-fechar" onclick="this.closest('dialog').close()">✕ Fechar</button>
+                    <h2>Reino de Re-Estize</h2>
+                    <img src="./img/re-estize-kingdom.jpeg" alt="Reino de Re-Estize Grande" class="imagem-foco" />
+
+                    <p class="texto-descricao">
+                        Uma das maiores e mais antigas nações humanas do continente no universo de Overlord. Fundado há mais de dois séculos, o reino 
+                        tornou-se uma potência graças às suas vastas terras férteis, ao intenso comércio e à força de sua nobreza. Durante muito tempo, 
+                        foi considerado um símbolo de prosperidade e estabilidade, 
+                        abrigando uma grande população distribuída entre cidades fortificadas, vilarejos agrícolas e importantes centros comerciais.
+                    </p>
+
+                    <!-- Nova seção com as fotos das cidades integradas -->
+                    <h3 class="titulo-cidades2">Cidades Notáveis 8</h3>
+                    <div class="container-cidades">
+                        <div class="card-cidade2">
+                            <h4>E-Rantel</h4>
+                            <!-- Corrigido de ./imag/ para ./img/ -->
+                            <img src="./imag/e-rantel.jpeg" alt="Cidade de E-Rantel" class="foto-cidade" />
+                            <p>Uma cidade fortaleza estrategicamente localizada próxima à fronteira, famosa por suas
+                                três camadas de muralhas defensivas.</p>
+                        </div>
+
+                        <div class="card-cidade2">
+                            <h4>E-Naeurl</h4>
+                            <!-- Corrigido de ./imag/ para ./img/ -->
+                            <img src="./imag/e-naeurl.jpeg" alt="Cidade de E-Naeurl" class="foto-cidade" />
+                            <p>Uma pequena cidade localizada a oeste de Re-Uroval. Embora possua uma população modesta, 
+                            funciona como ponto de descanso para viajantes e caravanas, além de servir como centro administrativo
+                            para os povoados da região oeste do reino.</p>
+                        </div>
+
+                        <div class="card-cidade2">
+                            <h4>E-Asenal</h4>
+                            <img src="./imag/e-asenal.png" alt="Cidade de E-Asenal" class="foto-cidade" />
+                            <p>Uma importante cidade fronteiriça localizada a noroeste do reino, 
+                                próxima às terras da Aliança do Conselho de Argland. 
+                                Sua posição estratégica faz dela um centro de vigilância, comércio e diplomacia, 
+                                sendo um ponto de passagem para mercadores e viajantes vindos do norte.
+                            </p>
+                        </div>
+
+                        <div class="card-cidade2">
+                            <h4>E-Pespel</h4>
+                            <img src="./imag/e-pespel.png" alt="Cidade de E-Pespel" class="foto-cidade" />
+                            <p>Situada a sudeste de Re-Robel, E-Pespel é uma pequena cidade voltada ao comércio regional e ao apoio 
+                                das comunidades rurais vizinhas. 
+                                Sua localização favorece a circulação de mercadorias entre os vilarejos do sul e os grandes centros urbanos.
+                            </p>
+                        </div>
+
+                        <div class="card-cidade2">
+                            <h4>Re-Robel</h4>
+                            <img src="./imag/re-robel.png" alt="Cidade de Re-Robel" class="foto-cidade" />
+                            <p>Encontra-se ao sudoeste da capital e é conhecida por suas extensas terras férteis. 
+                                A agricultura e a pecuária representam as principais atividades econômicas da cidade, 
+                                que desempenha papel fundamental no abastecimento alimentar da população.
+                            </p>
+                        </div>
+
+                        <div class="card-cidade2">
+                            <h4>Re-Beauleuror</h4>
+                            <img src="./imag/re-beauleuror.png" alt="Cidade de Re-Beauleuror" class="foto-cidade" />
+                            <p>Situada a noroeste da capital, Re-Beauleuror é uma cidade de médio porte conhecida por sua agricultura e 
+                                pelas rotas comerciais que ligam as regiões centrais às fronteiras do reino. 
+                                Sua economia depende principalmente da produção agrícola e do comércio terrestre.
+                            </p>
+                        </div>
+
+                        <div class="card-cidade2">
+                            <h4>Re-Uroval</h4>
+                            <img src="./imag/re-uroval.png" alt="Cidade de Re-Uroval" class="foto-cidade" />
+                            <p>Localiza-se ao norte de Re-Blumrushur e atua como um importante centro regional para as comunidades do norte. 
+                                A cidade serve como ponto de apoio para viajantes, comerciantes e patrulhas 
+                                responsáveis pela segurança das estradas que atravessam essa região do reino.
+                            </p>
+                        </div>
+
+                        <div class="card-cidade2">
+                            <h4>Re-Blumrushur</h4>
+                            <img src="./imag/re-blumrushur.png" alt="Cidade de Re-Blumrushur" class="foto-cidade" />
+                            <p>Próxima às Montanhas Azerlisia, Re-Blumrushur é uma das principais cidades mineradoras de Re-Estize. 
+                                Sua economia é sustentada pela extração de ferro, carvão e outros minerais, abastecendo ferreiros e artesãos de diversas partes do reino.
+                            </p>
+                        </div>
+
+
+                    </div>
+                        
+                </div>
+            </dialog>
+
+
+
+            <!-- === REINO DE ROBLE 3=== -->
+            <button class="botao-mapa" onclick="document.getElementById('modal-roble').showModal()"
+                title="Reino de Roble">
+                <img id="mapa-roble" src="./img/roble-holy-kingdom.png" alt="Reino de Roble" />
+            </button>
+
+            <dialog id="modal-roble" class="modal-descricao">
+                <div class="conteudo-modal">
+                    <button class="botao-fechar" onclick="this.closest('dialog').close()">✕ Fechar</button>
+                    <h2>Reino de Roble</h2>
+                    <img src="./img/roble-holy-kingdom.png" alt="Reino de Roble Grande" class="imagem-foco" />
+                    <p class="texto-descricao">
+                        É uma nação conhecida por sua profunda devoção religiosa, forte senso de justiça e tradição militar. Governado por uma monarquia 
+                        de caráter sagrado, o reino foi fundado sob os princípios da fé, 
+                        da ordem e da proteção de seu povo, tornando-se um dos maiores símbolos de resistência contra as forças das trevas.
+                    </p>
+
+                     <!-- Nova seção com as fotos das cidades integradas -->
+                    <h3 class="titulo-cidades3">Cidades Notáveis 6</h3>
+                    <div class="container-cidades">
+                        <div class="card-cidade3">
+                            <h4>Kalisha</h4>
+                            <!-- Corrigido de ./imag/ para ./img/ -->
+                            <img src="./imag/kalisha.png" alt="Cidade de Kalisha" class="foto-cidade" />
+                            <p>É uma cidade-fortaleza localizada no Reino Sagrado do Norte e a mais próxima da 
+                                Grande Muralha. Devido à sua posição estratégica, tornou-se um dos principais centros 
+                                militares da região, servindo como base para patrulhas, abastecimento das tropas e coordenação da defesa da fronteira. 
+                                Seus habitantes convivem diariamente com a constante ameaça das tribos demi-humanas.
+                            </p>
+                        </div>
+
+                        <div class="card-cidade3">
+                            <h4>Debone</h4>
+                            <!-- Corrigido de ./imag/ para ./img/ -->
+                            <img src="./imag/debone.jpg" alt="Cidade de Debone" class="foto-cidade" />
+                            <p>É uma importante cidade-fortaleza situada no Reino Sagrado do Sul. 
+                                Responsável pela proteção das regiões meridionais, a cidade abriga uma forte guarnição militar e 
+                                desempenha papel essencial na segurança das rotas internas do reino. 
+                                Além de sua função defensiva, Debone também atua como centro de comércio e apoio logístico para as províncias do sul.
+                            </p>
+                        </div>
+
+                        <div class="card-cidade3">
+                            <h4>Capital Hoburns</h4>
+                            <!-- Corrigido de ./imag/ para ./img/ -->
+                            <img src="./imag/capital-hoburns.png" alt="Capital Hoburns" class="foto-cidade" />
+                            <p>É a capital do Reino Sagrado de Roble e o principal centro político, religioso e administrativo da nação. 
+                                Nela encontram-se o palácio real, os maiores templos e 
+                                as sedes das ordens de cavaleiros sagrados. 
+                                Como coração do reino, Hoburns concentra as decisões governamentais e 
+                                representa o símbolo da fé, da justiça e da unidade do povo de Roble.
+                            </p>
+                        </div>
+
+                        <div class="card-cidade3">
+                            <h4>Prart</h4>
+                            <!-- Corrigido de ./imag/ para ./img/ -->
+                            <img src="./imag/prart.png" alt="Cidade de Prart" class="foto-cidade" />
+                            <p>É uma importante cidade localizada entre Hoburns e Kalinsha, funcionando como 
+                                um elo entre a capital e as fortalezas da fronteira oriental. Sua posição estratégica faz dela um centro de abastecimento, 
+                                comércio e movimentação militar, sendo responsável por fornecer recursos e reforços às tropas estacionadas na Grande Muralha.
+                            </p>
+                        </div>
+
+                        <div class="card-cidade3">
+                            <h4>Rimun</h4>
+                            <!-- Corrigido de ./imag/ para ./img/ -->
+                            <img src="./imag/rimun.webp" alt="Cidade de Rimun" class="foto-cidade" />
+                            <p>É a principal cidade portuária do Reino Sagrado, situada a oeste de Hoburns. 
+                                Seu porto movimenta grande parte do comércio marítimo da nação, recebendo embarcações de diversos países e 
+                                facilitando a importação de mercadorias e o transporte de suprimentos. 
+                                Além de sua importância econômica, Rimun também abriga uma pequena frota encarregada da defesa da costa.
+                            </p>
+                        </div>
+
+                        <div class="card-cidade3">
+                            <h4>Loyts</h4>
+                            <!-- Corrigido de ./imag/ para ./img/ -->
+                            <img src="./imag/loyts.png" alt="Cidade de Loyts" class="foto-cidade" />
+                            <p>É uma pequena cidade governada por um barão e voltada principalmente para a agricultura e a administração das terras vizinhas. 
+                                Embora possua menor relevância política em comparação às grandes cidades do reino, desempenha 
+                                um papel importante no abastecimento de alimentos e na manutenção da economia local. 
+                                Sua população vive de forma relativamente tranquila, preservando as tradições e os costumes típicos do interior do Reino Sagrado.
+                            </p>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </dialog>
+
+
+
+            <!-- === REINO DE SLANE 4=== -->
+            <button class="botao-mapa" onclick="document.getElementById('modal-slane').showModal()"
+                title="Reino de Slane">
+                <img id="mapa-slane" src="./img/slane-theocracy.png" alt="Reino de Slane" />
+            </button>
+
+            <dialog id="modal-slane" class="modal-descricao">
+                <div class="conteudo-modal">
+                    <button class="botao-fechar" onclick="this.closest('dialog').close()">✕ Fechar</button>
+                    <h2>Reino de Slane</h2>
+                    <img src="./img/slane-theocracy.png" alt="Reino de Slane Grande" class="imagem-foco" />
+                    <p class="texto-descricao">
+                        É a mais antiga e uma das mais poderosas nações humanas do mundo de Overlord. Fundada há aproximadamente seis séculos pelos descendentes dos lendários 
+                        Seis Grandes Deuses, a nação surgiu durante uma era em que a humanidade era constantemente perseguida por outras raças. Sob a proteção e os ensinamentos 
+                        dessas figuras divinas, a Teocracia tornou-se um refúgio para os humanos e, com o passar dos séculos, consolidou-se como uma potência militar, religiosa e política.
+                    </p>
+
+                    <!-- Nova seção com as fotos das cidades integradas -->
+                    <h3 class="titulo-cidades4">Cidades Notáveis 1</h3>
+                    <div class="container-cidades">
+                        <div class="card-cidade4">
+                            <h4>Silksuntecks</h4>
+                            <!-- Corrigido de ./imag/ para ./img/ -->
+                            <img src="./imag/silksuntecks.png" alt="Cidade de Silksuntecks" class="foto-cidade" />
+                            <p>É a capital da Teocracia Slane e o coração político, religioso e militar da nação. Considerada uma das cidades mais antigas do continente, 
+                                ela foi construída para servir como o centro da fé nos Seis Grandes Deuses, reunindo os principais templos, instituições governamentais e 
+                                quartéis das poderosas Escrituras da Teocracia. <br></br>
+                                A cidade abriga o Alto Conselho e os Cardeais, responsáveis por administrar os assuntos do Estado e interpretar a vontade dos 
+                                Seis Grandes Deuses. Como sede do governo teocrático, todas as 
+                                decisões políticas, militares e religiosas da nação partem de Silksuntecks, tornando-a o principal centro de poder da humanidade.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </dialog>
+        </div>
+
+
+
+        <div class="mapa-direita">
+
+
+            <!-- === REINO DRAGÃO 5=== -->
+            <button class="botao-mapa" onclick="document.getElementById('modal-dragao').showModal()"
+                title="Reino do Dragão">
+                <img id="mapa-dragao" src="./img/dragon-kingdom.png" alt="Reino do Dragão" />
+            </button>
+
+            <dialog id="modal-dragao" class="modal-descricao">
+                <div class="conteudo-modal">
+                    <button class="botao-fechar" onclick="this.closest('dialog').close()">✕ Fechar</button>
+                    <h2>Reino do Dragão</h2>
+                    <img src="./img/dragon-kingdom.png" alt="Reino do Dragão Grande" class="imagem-foco" />
+                    <p class="texto-descricao">
+                        É uma pequena, porém resiliente nação humana localizada na região sudeste do continente. Cercado por montanhas, 
+                        florestas e vastas planícies, o reino é conhecido tanto por sua forte ligação com os dragões quanto por sua longa 
+                        história de resistência contra invasões de povos demi-humanos. Apesar de seu território relativamente modesto, sua posição estratégica faz dele 
+                        uma importante barreira entre as grandes nações civilizadas e as terras dominadas por tribos hostis.
+                        <br></br>
+                        A nação é governada pela Rainha Draudillon Oriculus, uma soberana respeitada por sua inteligência, coragem e dedicação ao povo. Descendente de uma 
+                        antiga linhagem conhecida como os Senhores dos Dragões, Draudillon herdou uma pequena parcela do sangue dracônico que corre em sua família há gerações.
+                    </p>
+                </div>
+            </dialog>
+
+
+
+            <!-- === REINO ANÃO 6=== -->
+            <button class="botao-mapa" onclick="document.getElementById('modal-anao').showModal()"
+                title="Reino dos Anões">
+                <img id="mapa-anao" src="./img/dwarf-kingdowm.png" alt="Reino dos Anões" />
+            </button>
+
+            <dialog id="modal-anao" class="modal-descricao">
+                <div class="conteudo-modal">
+                    <button class="botao-fechar" onclick="this.closest('dialog').close()">✕ Fechar</button>
+                    <h2>Reino dos Anões</h2>
+                    <img src="./img/dwarf-kingdowm.png" alt="Reino dos Anões Grande" class="imagem-foco" />
+                    <p class="texto-descricao">
+                        No coração dessa cordilheira encontra-se o Reino Anão, uma antiga nação fundada por um dos lendários 
+                        Treze Heróis após o fim da guerra contra as Divindades Malignas. Desde sua fundação, os anões transformaram o 
+                        interior das montanhas em uma vasta rede de fortalezas, minas e cidades escavadas diretamente na rocha. Graças ao 
+                        domínio da metalurgia, da engenharia e da mineração, o reino tornou-se famoso pela produção de armas, armaduras e artefatos de qualidade 
+                        incomparável, sendo considerado um dos maiores centros de forja de todo o continente.
+                    </p>
+
+                    <!-- Nova seção com as fotos das cidades integradas -->
+                    <h3 class="titulo-cidades6">Cidades Notáveis 4</h3>
+                    <div class="container-cidades">
+                        <div class="card-cidade6">
+                            <h4>Feo Jera</h4>
+                            <!-- Corrigido de ./imag/ para ./img/ -->
+                            <img src="./imag/feo-jera.png" alt="Cidade de Feo Jera" class="foto-cidade" />
+                            <p>É a atual capital administrativa do Reino Anão e o maior centro político da nação. 
+                                Construída em um enorme complexo subterrâneo iluminado por cristais naturais e rios de magma, a 
+                                cidade tornou-se o coração do reino após o abandono de Feo Berkana. 
+                                É nela que residem o conselho real, os principais líderes dos clãs anões e os maiores mestres artesãos do país.
+                            </p>
+                        </div>
+
+                        <div class="card-cidade6">
+                            <h4>Feo Raidho</h4>
+                            <!-- Corrigido de ./imag/ para ./img/ -->
+                            <img src="./imag/feo-raidho.png" alt="Cidade de Feo Raidho" class="foto-cidade" />
+                            <p>É uma cidade dedicada à mineração e à metalurgia, sendo considerada a maior potência industrial do Reino Anão. 
+                                Localizada em uma região rica em jazidas minerais, suas minas se estendem por quilômetros sob as montanhas, fornecendo ferro, mithril,
+                                 adamantita e diversos metais raros utilizados pelos melhores ferreiros do continente.
+                            </p>
+                        </div>
+
+                        <div class="card-cidade6">
+                            <h4>Feo Teiwaz</h4>
+                            <!-- Corrigido de ./imag/ para ./img/ -->
+                            <img src="./imag/feo-teiwaz.jpg" alt="Cidade de Feo Teiwaz" class="foto-cidade" />
+                            <p>É reconhecida como o principal centro cultural e educacional do Reino Anão. 
+                                Embora também possua minas e oficinas, sua maior importância está na preservação das tradições ancestrais, 
+                                da história dos clãs e dos conhecimentos sobre metalurgia, engenharia e runas.
+                            </p>
+                        </div>
+
+                        <div class="card-cidade6">
+                            <h4>Feo Berkana</h4>
+                            <!-- Corrigido de ./imag/ para ./img/ -->
+                            <img src="./imag/feo-berkana.jpg" alt="Cidade de Feo Berkana" class="foto-cidade" />
+                            <p>Foi a primeira e mais grandiosa capital do Reino Anão, símbolo máximo do poder e da 
+                            prosperidade da nação durante séculos. Construída no centro das Montanhas Azerlisia, 
+                            a cidade possuía salões monumentais, palácios esculpidos em pedra maciça e algumas das maiores forjas já construídas pelos anões.
+                            </p>
+
+
+                    </div>
+
+                </div>
+            </dialog>
+
+
+
+            <!-- === REINO ELFO 7=== -->
+            <button class="botao-mapa" onclick="document.getElementById('modal-elfo').showModal()"
+                title="Reino dos Elfos">
+                <img id="mapa-elfo" src="./img/elf-country.png" alt="Reino dos Elfos" />
+            </button>
+
+            <dialog id="modal-elfo" class="modal-descricao">
+                <div class="conteudo-modal">
+                    <button class="botao-fechar" onclick="this.closest('dialog').close()">✕ Fechar</button>
+                    <h2>Reino dos Elfos</h2>
+                    <img src="./img/elf-country.png" alt="Reino dos Elfos Grande" class="imagem-foco" />
+                    <p class="texto-descricao">
+                        É uma antiga nação localizada ao sul da Teocracia Slane, escondida no interior da vasta Grande Floresta de Evasha. 
+                        Isolado do restante do continente por densas florestas e uma geografia de difícil acesso, o reino é habitado principalmente 
+                        por elfos e governado por sua própria família real. Conhecidos por sua profunda ligação com a natureza, os elfos desenvolveram uma cultura voltada para a 
+                        preservação das florestas, o domínio da magia e o uso excepcional do arco e flecha..
+                    </p>
+
+                    <!-- Nova seção com as fotos das cidades integradas -->
+                    <h3 class="titulo-cidades7">Cidades Notáveis 5</h3>
+                    <div class="container-cidades">
+                        <div class="card-cidade7">
+                            <h4>Lago Crescente</h4>
+                            <!-- Corrigido de ./imag/ para ./img/ -->
+                            <img src="./imag/lago-crescente.png" alt="Lago Crescente" class="foto-cidade" />
+                            <p>É um grande lago localizado nas proximidades da capital do País dos Elfos. Cercado por exuberantes florestas 
+                                e vegetação abundante, suas águas cristalinas abastecem a região e servem como importante fonte de alimento e 
+                                recursos para os habitantes. O lago também possui grande valor cultural para os elfos, 
+                                sendo frequentemente associado à tranquilidade, à harmonia com a natureza e às antigas tradições do reino.
+                            </p>
+                        </div>
+
+                        <div class="card-cidade7">
+                            <h4>Floresta de Evasha</h4>
+                            <!-- Corrigido de ./imag/ para ./img/ -->
+                            <img src="./imag/floresta-evasha.png" alt="Grande Floresta de Evasha" class="foto-cidade" />
+                            <p>É uma das maiores e mais antigas florestas do continente, ocupando uma vasta área ao sul da Teocracia Slane. 
+                                Suas árvores gigantescas, vegetação extremamente densa e inúmeros rios dificultam a exploração por estrangeiros, 
+                                tornando-a um ambiente naturalmente protegido contra invasões.
+                            </p>
+                        </div>
+
+                        <div class="card-cidade7">
+                            <h4>Três Arvores</h4>
+                            <!-- Corrigido de ./imag/ para ./img/ -->
+                            <img src="./imag/tres-arvores.png" alt="Três Arvores" class="foto-cidade" />
+                            <p>São um conjunto de três árvores colossais que servem como um importante marco geográfico dentro da Grande Floresta de Evasha. 
+                                Reconhecidas por sua enorme altura e idade milenar, elas indicam a entrada do território tradicional dos elfos negros.
+                            </p>
+                        </div>
+
+                        <div class="card-cidade7">
+                            <h4>Aju</h4>
+                            <!-- Corrigido de ./imag/ para ./img/ -->
+                            <img src="./imag/aju.png" alt="Aju" class="foto-cidade" />
+                            <p>É uma pequena vila de elfos negros situada ao norte da Grande Floresta de Evasha. Isolada do restante 
+                                do continente, a comunidade mantém um estilo de vida simples baseado na caça, coleta, agricultura e convivência harmoniosa com a natureza.
+                                Os moradores de Aju preservam antigas tradições de seu povo, valorizando a cooperação entre os membros da comunidade e o respeito pela floresta que os sustenta.
+                            </p>
+                        </div>
+
+                        <div class="card-cidade7">
+                            <h4>Vila dos Elfos Negros</h4>
+                            <!-- Corrigido de ./imag/ para ./img/ -->
+                            <img src="./imag/vila-dos-elfos-negros.png" alt="Vila dos Elfos Negros" class="foto-cidade" />
+                            <p>É o maior assentamento conhecido dos elfos negros na região, embora seu nome nunca seja revelado oficialmente na obra. 
+                                Localizada em uma área remota da Grande Floresta de Evasha, a vila abriga diversas famílias e serve como centro social, 
+                                cultural e comercial das comunidades vizinhas.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </dialog>
+
+
+
+            <!-- === REINO DE SORCERER 8=== -->
+            <button class="botao-mapa" onclick="document.getElementById('modal-sorcerer').showModal()"
+                title="Reino Feiticeiro">
+                <img id="mapa-sorcerer" src="./img/sorcerer-kingdom.png" alt="Reino Feiticeiro" />
+            </button>
+
+            <dialog id="modal-sorcerer" class="modal-descricao">
+                <div class="conteudo-modal">
+                    <button class="botao-fechar" onclick="this.closest('dialog').close()">✕ Fechar</button>
+                    <h2>Reino Feiticeiro (Sorcerer Kingdom)</h2>
+                    <img src="./img/sorcerer-kingdom.png" alt="Reino dos Mágicos Grande" class="imagem-foco" />
+                    <p class="texto-descricao">
+                        ??????????????????????
+                    </p>
+                </div>
+            </dialog>
+
+
+        </div>
+    </div> <!-- Fechamento da div container-mapas garantido aqui -->
+
+</body>
+
+</html>
